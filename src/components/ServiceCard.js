@@ -1,3 +1,4 @@
+
 import React from 'react';
 import styled from 'styled-components'
 
@@ -5,15 +6,12 @@ const Card = styled.div`
 display: flex;
 flex-direction: column;
 height: auto;
-width: 350px;
-padding: 18px 0;
+width: 20vw;
 align-items: center;
-border: 2px solid black;
-box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
-margin: 10px;
-border-radius: 11px
+text-align: center;
+margin: 60px 0;
 `
-const H2Text = styled.h2`
+const H3Text = styled.h3`
 font-size: 2rem;
 `
 const BodyText = styled.span `
@@ -23,15 +21,15 @@ const Logo = styled.img `
 width: 100px;
 `
 
-function InfoCard(props){
+function ServiceCard(props){
     const {logo, title} = props
     return (
         <Card>
             <Logo src={logo} />
-            <H2Text>{title}</H2Text>
+            <H3Text>{title}</H3Text>
             <BodyText>{props.children}</BodyText>
         </Card>
     )
 }
 
-export default InfoCard
+export default ServiceCard
